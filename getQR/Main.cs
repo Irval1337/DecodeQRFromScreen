@@ -19,11 +19,11 @@ namespace getQR
 
         private void Main_Load(object sender, EventArgs e)
         {
-            var hkey_open = new HotKey(Keys.Delete, KeyModifiers.None);
+            var hkey_open = new HotKey(Keys.Home, KeyModifiers.None);
             hkey_open.Pressed += (o, ev) => { new Form1().Show(); ev.Handled = true; };
             hkey_open.Register(this);
 
-            var hkey_close = new HotKey(Keys.Delete, KeyModifiers.Shift);
+            var hkey_close = new HotKey(Keys.Home, KeyModifiers.Shift);
             hkey_close.Pressed += (o, ev) => { Application.Exit(); ev.Handled = true; };
             hkey_close.Register(this);
         }
