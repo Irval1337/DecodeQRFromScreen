@@ -38,7 +38,7 @@ namespace getQR {
                 catch {
                     Clipboard.SetText("NULL");
                 }
-                Application.Exit();
+                this.Close();
             }
         }
 
@@ -56,7 +56,7 @@ namespace getQR {
 
         private void Form1_KeyDown(object sender, KeyEventArgs e) {
             if (e.KeyCode == Keys.Escape)
-                Application.Exit();
+                this.Close();
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e) {
